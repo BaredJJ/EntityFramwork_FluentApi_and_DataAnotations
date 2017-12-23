@@ -4,22 +4,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EntityFramwork_FluentApi_and_DataAnotations
 {
-    [Table("Product")]
+    //[Table("Product")]
     public class Product
     {
-        [Key]
+       // [Key]
         public int Id { get; set; }
-        [Required, MaxLength(50)]
+        //[Required, MaxLength(50)]
         public string Name { get; set; }
-        [Required, MaxLength(200)]
+        //[Required, MaxLength(200)]
         public string CompanyName { get; set; }
-        [Required, MaxLength(200)]
+        //[Required, MaxLength(200)]
         public string PartNumber { get; set; }
-        [Required]
+       // [Required]
         public double Coast { get; set; }
-        [Required]
+        //[Required]
         public ICollection<Customer> Customer { get; set; }
-        [Required]
+        //[Required]
         public ICollection<Order> Order { get; set; }
 
         public Product()

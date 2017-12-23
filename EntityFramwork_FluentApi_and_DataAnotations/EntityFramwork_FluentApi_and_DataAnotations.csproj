@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\CustomerConfig.cs" />
+    <Compile Include="Config\OrderConfig.cs" />
+    <Compile Include="Config\ProductConfig.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DbInicilaizer.cs" />
     <Compile Include="MyShopData.cs" />
