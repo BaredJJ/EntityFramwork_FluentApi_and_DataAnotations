@@ -34,11 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -57,17 +57,29 @@
     <Compile Include="Config\CustomerConfig.cs" />
     <Compile Include="Config\OrderConfig.cs" />
     <Compile Include="Config\ProductConfig.cs" />
+    <Compile Include="Config\Shop.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DbInicilaizer.cs" />
+    <Compile Include="Migrations\201712250905229_AddShop.Adress.cs" />
+    <Compile Include="Migrations\201712250905229_AddShop.Adress.Designer.cs">
+      <DependentUpon>201712250905229_AddShop.Adress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyShopData.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712250905229_AddShop.Adress.resx">
+      <DependentUpon>201712250905229_AddShop.Adress.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

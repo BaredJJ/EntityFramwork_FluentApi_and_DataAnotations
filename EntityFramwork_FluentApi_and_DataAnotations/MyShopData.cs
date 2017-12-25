@@ -16,6 +16,7 @@ namespace EntityFramwork_FluentApi_and_DataAnotations
         {
         }
 
+        public virtual DbSet<Shop> Shops { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -23,6 +24,7 @@ namespace EntityFramwork_FluentApi_and_DataAnotations
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new ShopConfig());
             modelBuilder.Configurations.Add(new CustomerConfig());
             modelBuilder.Configurations.Add(new OrderConfig());
             modelBuilder.Configurations.Add(new ProductConfig());

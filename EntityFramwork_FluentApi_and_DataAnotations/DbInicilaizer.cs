@@ -378,10 +378,16 @@ namespace EntityFramwork_FluentApi_and_DataAnotations
 
                 List<Product> products = new List<Product> {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15};
                 #endregion
+                Shop shop1 = new Shop { Id = 1, Name = "Колонтай", Adress = "Колонтай 50"};
+                shop1.Products = products;
+                shop1.Orders = orders;
+
 
                 db.Products.AddRange(products);
                 db.Customers.AddRange(customers);
                 db.Orders.AddRange(orders);
+                db.Shops.Add(shop1);
+                
                 db.SaveChanges();
             };
         }
